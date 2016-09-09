@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="CPP_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/socket/Client.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/socket/Client.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/model/Point.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/model/Hand.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/model/Point.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/model/Hand.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/recognition/Image.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/recognition/HandRecognition.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/recognition/Video.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/recognition/Video.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/recognition/HandRecognition.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/recognition/RoI.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/recognition/RoI.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/recognition/Image.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/HandRecognitionApp.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/HandRecognitionApp.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/gui/opencv/Window.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/gui/opencv/Window.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="Header Search Paths">
+        <CLASSES>
+          <root url="file:///usr/lib/gcc/x86_64-pc-linux-gnu/6.1.1/include" />
+          <root url="file:///usr/lib/gcc/x86_64-pc-linux-gnu/6.1.1/include-fixed" />
+          <root url="file:///usr/include" />
+          <root url="file:///usr/local/include" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file:///usr/lib/gcc/x86_64-pc-linux-gnu/6.1.1/include" />
+          <root url="file:///usr/lib/gcc/x86_64-pc-linux-gnu/6.1.1/include-fixed" />
+          <root url="file:///usr/include" />
+          <root url="file:///usr/local/include" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+</module>
