@@ -21,7 +21,7 @@ public:
     int getY();
     void setY(int y);
 
-    double distance(Point * p);
+    long double distance(Point * p);
 
 };
 

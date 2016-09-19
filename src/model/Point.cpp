@@ -14,7 +14,7 @@ Point::Point(int x, int y) {
     this->y = y;
 }
 
-double Point::distance(Point * p) {
+long double Point::distance(Point * p) {
     return sqrt(
             pow((double) (p->getX() - this->getX()), 2.0)
             +

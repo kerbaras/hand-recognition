@@ -10,6 +10,7 @@
 #include "model/Hand.h"
 #include "gui/opencv/Window.h"
 #include "socket/Client.h"
+#include "model/Point.h"
 #include <sys/types.h>
 #include <sys/socket.h>
 
@@ -45,6 +46,9 @@ HandRecognitionApp::HandRecognitionApp() {
         int x = hand->getCenter()->x, y = hand->getCenter()->y;
         int w = image->getSrc()->cols, h = image->getSrc()->rows;
         int gap = (h/(2*3)) - 5, vgap = w/3;
+
+        Point * center = new Point(w/2, h/2);
+
 
         if(y==0){
 
