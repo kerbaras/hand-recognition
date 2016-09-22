@@ -11,6 +11,8 @@
 #include "gui/opencv/Window.h"
 #include "socket/Client.h"
 #include "model/Point.h"
+#include "recognition/VelocityRecognition.h"
+#include "recognition/AngularRecognition.h"
 #include <sys/types.h>
 #include <sys/socket.h>
 
@@ -20,13 +22,15 @@ HandRecognitionApp::HandRecognitionApp() {
 
     Client * client = new Client("192.168.43.196", 5000);
 
-    Video *video = new Video(0);
+    Video *video = new Video(1);
     HandRecognition * handRecognition = new HandRecognition("izquierda");
 
     handRecognition->waitForHand(video);
 
     Window window = Window("original");
 
+    AngularRecognition * velocityRecognition = new AngularRecognition();
+    int m0 = 0; int m1=0;
     while(true){
         Image * image = video->getFrame();
         Hand * hand = handRecognition->getHand(image);
@@ -41,46 +45,24 @@ HandRecognitionApp::HandRecognitionApp() {
             cv::circle(*image->getSrc(), ptFar, 4, cv::Scalar(255, 255,0), 2);
         }
 
-        int m0 = 0; int m1=0;
-
-        int x = hand->getCenter()->x, y = hand->getCenter()->y;
         int w = image->getSrc()->cols, h = image->getSrc()->rows;
-        int gap = (h/(2*3)) - 5, vgap = w/3;
-
         Point * center = new Point(w/2, h/2);
+        velocityRecognition->fromHand(hand, center);
+        int motor0 = -velocityRecognition->getMotor2(); int motor1=-velocityRecognition->getMotor1();
 
-
-        if(y==0){
-
-        }else if (y < h/2 - 5){
-            if(y < gap){
-                m0 = 3; m1=3;
-            }else if(y < gap * 2){
-                m0 = 2; m1=2;
-            }else{
-                m0 = 1; m1=1;
-            }
-
-            if(x==0){
-
-            }else if(x<vgap){
-                m1 = m1 - 1;
-            }else if(x > vgap*2){
-                m0 = m0 -1;
-            }
-
-            m0 = m0 * (-1);
-            m1 = m1 * (-1);
-
+            m0 = motor0;
+            m1 = motor1;
             std::string msg;
-            msg = "{\"task\":\"chspeed\",\"m0\":" + std::to_string(m0) + ",\"m1\":" + std::to_string(m1) + "}";
+            msg = "{\"task\":\"setSpeed\",\"m0\":" + std::to_string(m0) + ",\"m1\":" + std::to_string(m1) + "}";
             client->send(msg);
-        }
 
-        std::string msg;
-        msg = "{\"task\":\"chspeed\",\"m0\":" + std::to_string(m0) + ",\"m1\":" + std::to_string(m1) + "}";
-        client->send(msg);
-
+        cv::circle(*image->getSrc(), cv::Point(center->getX(), center->getY()), w/8, cv::Scalar(0,10,127),2);
+        cv::circle(*image->getSrc(), cv::Point(center->getX(), center->getY()), (w/8)*2, cv::Scalar(76,01,255),2);
+        cv::circle(*image->getSrc(), cv::Point(center->getX(), center->getY()), (w/8)*3, cv::Scalar(0,16,204),2);
+        cv::line(*image->getSrc(), cv::Point(center->getX(), center->getY()), *hand->getCenter(), cv::Scalar(0,220,115),1);
+        cv::line(*image->getSrc(), cv::Point(0, h/2), cv::Point(w,h/2), cv::Scalar(0,220,115),2);
+        //cv::line(*image->getSrc(), cv::Point(0, 0), cv::Point(w,h), cv::Scalar(0,220,115),2);
+        //cv::line(*image->getSrc(), cv::Point(w, 0), cv::Point(0, h), cv::Scalar(0,220,115),2);
         window.show(image);
         delete image;
 
@@ -94,6 +76,7 @@ HandRecognitionApp::HandRecognitionApp() {
         }
     }
 
+    delete velocityRecognition;
     delete handRecognition;
     delete video;
     delete client;

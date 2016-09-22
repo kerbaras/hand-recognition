@@ -14,8 +14,10 @@
       <sourceFolder url="file://$MODULE_DIR$/src/recognition/HandRecognition.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/recognition/Video.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/recognition/VelocityRecognition.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/recognition/HandRecognition.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/recognition/AngularRecognition.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/recognition/AngularRecognition.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/recognition/RoI.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/recognition/HandRecognition.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/recognition/RoI.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/recognition/Video.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/recognition/Image.h" isTestSource="false" />

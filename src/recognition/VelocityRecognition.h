@@ -9,13 +9,19 @@
 #include "../model/Hand.h"
 #include "../model/Point.h"
 
+
+#define PI 3.14159265
+
 class VelocityRecognition {
+protected:
+    int motor1;
+    int motor2;
 
 public:
     VelocityRecognition();
-    void fromHand(Hand * hand, Point *center);
     int getMotor1();
     int getMotor2();
+    virtual void fromHand(Hand * hand, Point *center);
 };
 
 

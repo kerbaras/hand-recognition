@@ -8,6 +8,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/HandRecognition.dir/src/model/Hand.cpp.o"
   "CMakeFiles/HandRecognition.dir/src/model/Point.cpp.o"
   "CMakeFiles/HandRecognition.dir/src/gui/opencv/Window.cpp.o"
+  "CMakeFiles/HandRecognition.dir/src/socket/Client.cpp.o"
+  "CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.o"
+  "CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.o"
   "HandRecognition.pdb"
   "HandRecognition"
 )

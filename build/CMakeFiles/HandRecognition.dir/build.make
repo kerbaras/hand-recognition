@@ -273,6 +273,78 @@ CMakeFiles/HandRecognition.dir/src/gui/opencv/Window.cpp.o.provides: CMakeFiles/
 CMakeFiles/HandRecognition.dir/src/gui/opencv/Window.cpp.o.provides.build: CMakeFiles/HandRecognition.dir/src/gui/opencv/Window.cpp.o
 
 
+CMakeFiles/HandRecognition.dir/src/socket/Client.cpp.o: CMakeFiles/HandRecognition.dir/flags.make
+CMakeFiles/HandRecognition.dir/src/socket/Client.cpp.o: ../src/socket/Client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matias/Desktop/HandRecognition/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/HandRecognition.dir/src/socket/Client.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HandRecognition.dir/src/socket/Client.cpp.o -c /home/matias/Desktop/HandRecognition/src/socket/Client.cpp
+
+CMakeFiles/HandRecognition.dir/src/socket/Client.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HandRecognition.dir/src/socket/Client.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matias/Desktop/HandRecognition/src/socket/Client.cpp > CMakeFiles/HandRecognition.dir/src/socket/Client.cpp.i
+
+CMakeFiles/HandRecognition.dir/src/socket/Client.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HandRecognition.dir/src/socket/Client.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matias/Desktop/HandRecognition/src/socket/Client.cpp -o CMakeFiles/HandRecognition.dir/src/socket/Client.cpp.s
+
+CMakeFiles/HandRecognition.dir/src/socket/Client.cpp.o.requires:
+
+.PHONY : CMakeFiles/HandRecognition.dir/src/socket/Client.cpp.o.requires
+
+CMakeFiles/HandRecognition.dir/src/socket/Client.cpp.o.provides: CMakeFiles/HandRecognition.dir/src/socket/Client.cpp.o.requires
+	$(MAKE) -f CMakeFiles/HandRecognition.dir/build.make CMakeFiles/HandRecognition.dir/src/socket/Client.cpp.o.provides.build
+.PHONY : CMakeFiles/HandRecognition.dir/src/socket/Client.cpp.o.provides
+
+CMakeFiles/HandRecognition.dir/src/socket/Client.cpp.o.provides.build: CMakeFiles/HandRecognition.dir/src/socket/Client.cpp.o
+
+
+CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.o: CMakeFiles/HandRecognition.dir/flags.make
+CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.o: ../src/recognition/VelocityRecognition.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matias/Desktop/HandRecognition/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.o -c /home/matias/Desktop/HandRecognition/src/recognition/VelocityRecognition.cpp
+
+CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matias/Desktop/HandRecognition/src/recognition/VelocityRecognition.cpp > CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.i
+
+CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matias/Desktop/HandRecognition/src/recognition/VelocityRecognition.cpp -o CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.s
+
+CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.o.requires:
+
+.PHONY : CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.o.requires
+
+CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.o.provides: CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.o.requires
+	$(MAKE) -f CMakeFiles/HandRecognition.dir/build.make CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.o.provides.build
+.PHONY : CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.o.provides
+
+CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.o.provides.build: CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.o
+
+
+CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.o: CMakeFiles/HandRecognition.dir/flags.make
+CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.o: ../src/recognition/AngularRecognition.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/matias/Desktop/HandRecognition/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.o -c /home/matias/Desktop/HandRecognition/src/recognition/AngularRecognition.cpp
+
+CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/matias/Desktop/HandRecognition/src/recognition/AngularRecognition.cpp > CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.i
+
+CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/matias/Desktop/HandRecognition/src/recognition/AngularRecognition.cpp -o CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.s
+
+CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.o.requires:
+
+.PHONY : CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.o.requires
+
+CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.o.provides: CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.o.requires
+	$(MAKE) -f CMakeFiles/HandRecognition.dir/build.make CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.o.provides.build
+.PHONY : CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.o.provides
+
+CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.o.provides.build: CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.o
+
+
 # Object files for target HandRecognition
 HandRecognition_OBJECTS = \
 "CMakeFiles/HandRecognition.dir/src/main.cpp.o" \
@@ -283,7 +355,10 @@ HandRecognition_OBJECTS = \
 "CMakeFiles/HandRecognition.dir/src/recognition/HandRecognition.cpp.o" \
 "CMakeFiles/HandRecognition.dir/src/model/Hand.cpp.o" \
 "CMakeFiles/HandRecognition.dir/src/model/Point.cpp.o" \
-"CMakeFiles/HandRecognition.dir/src/gui/opencv/Window.cpp.o"
+"CMakeFiles/HandRecognition.dir/src/gui/opencv/Window.cpp.o" \
+"CMakeFiles/HandRecognition.dir/src/socket/Client.cpp.o" \
+"CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.o" \
+"CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.o"
 
 # External object files for target HandRecognition
 HandRecognition_EXTERNAL_OBJECTS =
@@ -297,6 +372,9 @@ HandRecognition: CMakeFiles/HandRecognition.dir/src/recognition/HandRecognition.
 HandRecognition: CMakeFiles/HandRecognition.dir/src/model/Hand.cpp.o
 HandRecognition: CMakeFiles/HandRecognition.dir/src/model/Point.cpp.o
 HandRecognition: CMakeFiles/HandRecognition.dir/src/gui/opencv/Window.cpp.o
+HandRecognition: CMakeFiles/HandRecognition.dir/src/socket/Client.cpp.o
+HandRecognition: CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.o
+HandRecognition: CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.o
 HandRecognition: CMakeFiles/HandRecognition.dir/build.make
 HandRecognition: /usr/lib/libopencv_xphoto.so.3.1.0
 HandRecognition: /usr/lib/libopencv_xobjdetect.so.3.1.0
@@ -339,7 +417,7 @@ HandRecognition: /usr/lib/libopencv_imgproc.so.3.1.0
 HandRecognition: /usr/lib/libopencv_flann.so.3.1.0
 HandRecognition: /usr/lib/libopencv_core.so.3.1.0
 HandRecognition: CMakeFiles/HandRecognition.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/matias/Desktop/HandRecognition/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable HandRecognition"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/matias/Desktop/HandRecognition/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable HandRecognition"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/HandRecognition.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -356,6 +434,9 @@ CMakeFiles/HandRecognition.dir/requires: CMakeFiles/HandRecognition.dir/src/reco
 CMakeFiles/HandRecognition.dir/requires: CMakeFiles/HandRecognition.dir/src/model/Hand.cpp.o.requires
 CMakeFiles/HandRecognition.dir/requires: CMakeFiles/HandRecognition.dir/src/model/Point.cpp.o.requires
 CMakeFiles/HandRecognition.dir/requires: CMakeFiles/HandRecognition.dir/src/gui/opencv/Window.cpp.o.requires
+CMakeFiles/HandRecognition.dir/requires: CMakeFiles/HandRecognition.dir/src/socket/Client.cpp.o.requires
+CMakeFiles/HandRecognition.dir/requires: CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.o.requires
+CMakeFiles/HandRecognition.dir/requires: CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.o.requires
 
 .PHONY : CMakeFiles/HandRecognition.dir/requires
 

@@ -14,11 +14,11 @@ Point::Point(int x, int y) {
     this->y = y;
 }
 
-long double Point::distance(Point * p) {
+long double Point::distance(cv::Point * p) {
     return sqrt(
-            pow((double) (p->getX() - this->getX()), 2.0)
+            pow((double) (p->x - this->x), 2.0)
             +
-            pow((double) (p->getY() - this->getY()), 2.0)
+            pow((double) (p->y - this->y), 2.0)
     );
 }
 

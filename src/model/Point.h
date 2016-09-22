@@ -6,6 +6,8 @@
 #define HANDRECOGNITION_POINT_H
 
 
+#include <opencv2/core/types.hpp>
+
 class Point {
 private:
     int x;
@@ -21,7 +23,7 @@ public:
     int getY();
     void setY(int y);
 
-    long double distance(Point * p);
+    long double distance(cv::Point * p);
 
 };
 

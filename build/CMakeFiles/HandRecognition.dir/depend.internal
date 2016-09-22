@@ -6,9 +6,13 @@ CMakeFiles/HandRecognition.dir/src/HandRecognitionApp.cpp.o
  /home/matias/Desktop/HandRecognition/src/HandRecognitionApp.h
  /home/matias/Desktop/HandRecognition/src/gui/opencv/Window.h
  /home/matias/Desktop/HandRecognition/src/model/Hand.h
+ /home/matias/Desktop/HandRecognition/src/model/Point.h
+ /home/matias/Desktop/HandRecognition/src/recognition/AngularRecognition.h
  /home/matias/Desktop/HandRecognition/src/recognition/HandRecognition.h
  /home/matias/Desktop/HandRecognition/src/recognition/Image.h
+ /home/matias/Desktop/HandRecognition/src/recognition/VelocityRecognition.h
  /home/matias/Desktop/HandRecognition/src/recognition/Video.h
+ /home/matias/Desktop/HandRecognition/src/socket/Client.h
 CMakeFiles/HandRecognition.dir/src/gui/opencv/Window.cpp.o
  /home/matias/Desktop/HandRecognition/src/gui/opencv/Window.cpp
  /home/matias/Desktop/HandRecognition/src/gui/opencv/Window.h
@@ -16,12 +20,19 @@ CMakeFiles/HandRecognition.dir/src/gui/opencv/Window.cpp.o
 CMakeFiles/HandRecognition.dir/src/main.cpp.o
  /home/matias/Desktop/HandRecognition/src/HandRecognitionApp.h
  /home/matias/Desktop/HandRecognition/src/main.cpp
+ /home/matias/Desktop/HandRecognition/src/socket/Client.h
 CMakeFiles/HandRecognition.dir/src/model/Hand.cpp.o
  /home/matias/Desktop/HandRecognition/src/model/Hand.cpp
  /home/matias/Desktop/HandRecognition/src/model/Hand.h
 CMakeFiles/HandRecognition.dir/src/model/Point.cpp.o
  /home/matias/Desktop/HandRecognition/src/model/Point.cpp
  /home/matias/Desktop/HandRecognition/src/model/Point.h
+CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.o
+ /home/matias/Desktop/HandRecognition/src/model/Hand.h
+ /home/matias/Desktop/HandRecognition/src/model/Point.h
+ /home/matias/Desktop/HandRecognition/src/recognition/AngularRecognition.cpp
+ /home/matias/Desktop/HandRecognition/src/recognition/AngularRecognition.h
+ /home/matias/Desktop/HandRecognition/src/recognition/VelocityRecognition.h
 CMakeFiles/HandRecognition.dir/src/recognition/HandRecognition.cpp.o
  /home/matias/Desktop/HandRecognition/src/gui/opencv/Window.h
  /home/matias/Desktop/HandRecognition/src/model/Hand.h
@@ -38,7 +49,15 @@ CMakeFiles/HandRecognition.dir/src/recognition/RoI.cpp.o
  /home/matias/Desktop/HandRecognition/src/recognition/Image.h
  /home/matias/Desktop/HandRecognition/src/recognition/RoI.cpp
  /home/matias/Desktop/HandRecognition/src/recognition/RoI.h
+CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.o
+ /home/matias/Desktop/HandRecognition/src/model/Hand.h
+ /home/matias/Desktop/HandRecognition/src/model/Point.h
+ /home/matias/Desktop/HandRecognition/src/recognition/VelocityRecognition.cpp
+ /home/matias/Desktop/HandRecognition/src/recognition/VelocityRecognition.h
 CMakeFiles/HandRecognition.dir/src/recognition/Video.cpp.o
  /home/matias/Desktop/HandRecognition/src/recognition/Image.h
  /home/matias/Desktop/HandRecognition/src/recognition/Video.cpp
  /home/matias/Desktop/HandRecognition/src/recognition/Video.h
+CMakeFiles/HandRecognition.dir/src/socket/Client.cpp.o
+ /home/matias/Desktop/HandRecognition/src/socket/Client.cpp
+ /home/matias/Desktop/HandRecognition/src/socket/Client.h

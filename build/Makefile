@@ -258,6 +258,33 @@ src/model/Point.cpp.s:
 	$(MAKE) -f CMakeFiles/HandRecognition.dir/build.make CMakeFiles/HandRecognition.dir/src/model/Point.cpp.s
 .PHONY : src/model/Point.cpp.s
 
+src/recognition/AngularRecognition.o: src/recognition/AngularRecognition.cpp.o
+
+.PHONY : src/recognition/AngularRecognition.o
+
+# target to build an object file
+src/recognition/AngularRecognition.cpp.o:
+	$(MAKE) -f CMakeFiles/HandRecognition.dir/build.make CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.o
+.PHONY : src/recognition/AngularRecognition.cpp.o
+
+src/recognition/AngularRecognition.i: src/recognition/AngularRecognition.cpp.i
+
+.PHONY : src/recognition/AngularRecognition.i
+
+# target to preprocess a source file
+src/recognition/AngularRecognition.cpp.i:
+	$(MAKE) -f CMakeFiles/HandRecognition.dir/build.make CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.i
+.PHONY : src/recognition/AngularRecognition.cpp.i
+
+src/recognition/AngularRecognition.s: src/recognition/AngularRecognition.cpp.s
+
+.PHONY : src/recognition/AngularRecognition.s
+
+# target to generate assembly for a file
+src/recognition/AngularRecognition.cpp.s:
+	$(MAKE) -f CMakeFiles/HandRecognition.dir/build.make CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.s
+.PHONY : src/recognition/AngularRecognition.cpp.s
+
 src/recognition/HandRecognition.o: src/recognition/HandRecognition.cpp.o
 
 .PHONY : src/recognition/HandRecognition.o
@@ -339,6 +366,33 @@ src/recognition/RoI.cpp.s:
 	$(MAKE) -f CMakeFiles/HandRecognition.dir/build.make CMakeFiles/HandRecognition.dir/src/recognition/RoI.cpp.s
 .PHONY : src/recognition/RoI.cpp.s
 
+src/recognition/VelocityRecognition.o: src/recognition/VelocityRecognition.cpp.o
+
+.PHONY : src/recognition/VelocityRecognition.o
+
+# target to build an object file
+src/recognition/VelocityRecognition.cpp.o:
+	$(MAKE) -f CMakeFiles/HandRecognition.dir/build.make CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.o
+.PHONY : src/recognition/VelocityRecognition.cpp.o
+
+src/recognition/VelocityRecognition.i: src/recognition/VelocityRecognition.cpp.i
+
+.PHONY : src/recognition/VelocityRecognition.i
+
+# target to preprocess a source file
+src/recognition/VelocityRecognition.cpp.i:
+	$(MAKE) -f CMakeFiles/HandRecognition.dir/build.make CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.i
+.PHONY : src/recognition/VelocityRecognition.cpp.i
+
+src/recognition/VelocityRecognition.s: src/recognition/VelocityRecognition.cpp.s
+
+.PHONY : src/recognition/VelocityRecognition.s
+
+# target to generate assembly for a file
+src/recognition/VelocityRecognition.cpp.s:
+	$(MAKE) -f CMakeFiles/HandRecognition.dir/build.make CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.s
+.PHONY : src/recognition/VelocityRecognition.cpp.s
+
 src/recognition/Video.o: src/recognition/Video.cpp.o
 
 .PHONY : src/recognition/Video.o
@@ -366,6 +420,33 @@ src/recognition/Video.cpp.s:
 	$(MAKE) -f CMakeFiles/HandRecognition.dir/build.make CMakeFiles/HandRecognition.dir/src/recognition/Video.cpp.s
 .PHONY : src/recognition/Video.cpp.s
 
+src/socket/Client.o: src/socket/Client.cpp.o
+
+.PHONY : src/socket/Client.o
+
+# target to build an object file
+src/socket/Client.cpp.o:
+	$(MAKE) -f CMakeFiles/HandRecognition.dir/build.make CMakeFiles/HandRecognition.dir/src/socket/Client.cpp.o
+.PHONY : src/socket/Client.cpp.o
+
+src/socket/Client.i: src/socket/Client.cpp.i
+
+.PHONY : src/socket/Client.i
+
+# target to preprocess a source file
+src/socket/Client.cpp.i:
+	$(MAKE) -f CMakeFiles/HandRecognition.dir/build.make CMakeFiles/HandRecognition.dir/src/socket/Client.cpp.i
+.PHONY : src/socket/Client.cpp.i
+
+src/socket/Client.s: src/socket/Client.cpp.s
+
+.PHONY : src/socket/Client.s
+
+# target to generate assembly for a file
+src/socket/Client.cpp.s:
+	$(MAKE) -f CMakeFiles/HandRecognition.dir/build.make CMakeFiles/HandRecognition.dir/src/socket/Client.cpp.s
+.PHONY : src/socket/Client.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -390,6 +471,9 @@ help:
 	@echo "... src/model/Point.o"
 	@echo "... src/model/Point.i"
 	@echo "... src/model/Point.s"
+	@echo "... src/recognition/AngularRecognition.o"
+	@echo "... src/recognition/AngularRecognition.i"
+	@echo "... src/recognition/AngularRecognition.s"
 	@echo "... src/recognition/HandRecognition.o"
 	@echo "... src/recognition/HandRecognition.i"
 	@echo "... src/recognition/HandRecognition.s"
@@ -399,9 +483,15 @@ help:
 	@echo "... src/recognition/RoI.o"
 	@echo "... src/recognition/RoI.i"
 	@echo "... src/recognition/RoI.s"
+	@echo "... src/recognition/VelocityRecognition.o"
+	@echo "... src/recognition/VelocityRecognition.i"
+	@echo "... src/recognition/VelocityRecognition.s"
 	@echo "... src/recognition/Video.o"
 	@echo "... src/recognition/Video.i"
 	@echo "... src/recognition/Video.s"
+	@echo "... src/socket/Client.o"
+	@echo "... src/socket/Client.i"
+	@echo "... src/socket/Client.s"
 .PHONY : help
 
 

@@ -21,6 +21,18 @@ model/Hand.h
 /home/matias/Desktop/HandRecognition/src/model/Hand.h
 gui/opencv/Window.h
 /home/matias/Desktop/HandRecognition/src/gui/opencv/Window.h
+socket/Client.h
+/home/matias/Desktop/HandRecognition/src/socket/Client.h
+model/Point.h
+/home/matias/Desktop/HandRecognition/src/model/Point.h
+recognition/VelocityRecognition.h
+/home/matias/Desktop/HandRecognition/src/recognition/VelocityRecognition.h
+recognition/AngularRecognition.h
+/home/matias/Desktop/HandRecognition/src/recognition/AngularRecognition.h
+sys/types.h
+-
+sys/socket.h
+-
 
 /home/matias/Desktop/HandRecognition/src/HandRecognitionApp.h
 
@@ -41,6 +53,10 @@ iostream
 -
 HandRecognitionApp.h
 /home/matias/Desktop/HandRecognition/src/HandRecognitionApp.h
+socket/Client.h
+/home/matias/Desktop/HandRecognition/src/socket/Client.h
+unistd.h
+-
 
 /home/matias/Desktop/HandRecognition/src/model/Hand.cpp
 Hand.h
@@ -63,6 +79,16 @@ math.h
 -
 
 /home/matias/Desktop/HandRecognition/src/model/Point.h
+opencv2/core/types.hpp
+-
+
+/home/matias/Desktop/HandRecognition/src/recognition/AngularRecognition.cpp
+AngularRecognition.h
+/home/matias/Desktop/HandRecognition/src/recognition/AngularRecognition.h
+
+/home/matias/Desktop/HandRecognition/src/recognition/AngularRecognition.h
+VelocityRecognition.h
+/home/matias/Desktop/HandRecognition/src/recognition/VelocityRecognition.h
 
 /home/matias/Desktop/HandRecognition/src/recognition/HandRecognition.cpp
 HandRecognition.h
@@ -96,6 +122,16 @@ RoI.h
 Image.h
 /home/matias/Desktop/HandRecognition/src/recognition/Image.h
 
+/home/matias/Desktop/HandRecognition/src/recognition/VelocityRecognition.cpp
+VelocityRecognition.h
+/home/matias/Desktop/HandRecognition/src/recognition/VelocityRecognition.h
+
+/home/matias/Desktop/HandRecognition/src/recognition/VelocityRecognition.h
+../model/Hand.h
+/home/matias/Desktop/HandRecognition/src/model/Hand.h
+../model/Point.h
+/home/matias/Desktop/HandRecognition/src/model/Point.h
+
 /home/matias/Desktop/HandRecognition/src/recognition/Video.cpp
 Video.h
 /home/matias/Desktop/HandRecognition/src/recognition/Video.h
@@ -105,4 +141,30 @@ opencv2/highgui.hpp
 /home/matias/Desktop/HandRecognition/src/recognition/opencv2/highgui.hpp
 Image.h
 /home/matias/Desktop/HandRecognition/src/recognition/Image.h
+
+/home/matias/Desktop/HandRecognition/src/socket/Client.cpp
+Client.h
+/home/matias/Desktop/HandRecognition/src/socket/Client.h
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+string.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+iostream
+-
+
+/home/matias/Desktop/HandRecognition/src/socket/Client.h
+string
+-
+netinet/in.h
+-
+netdb.h
+-
 

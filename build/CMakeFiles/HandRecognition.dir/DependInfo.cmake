@@ -9,10 +9,13 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/matias/Desktop/HandRecognition/src/main.cpp" "/home/matias/Desktop/HandRecognition/build/CMakeFiles/HandRecognition.dir/src/main.cpp.o"
   "/home/matias/Desktop/HandRecognition/src/model/Hand.cpp" "/home/matias/Desktop/HandRecognition/build/CMakeFiles/HandRecognition.dir/src/model/Hand.cpp.o"
   "/home/matias/Desktop/HandRecognition/src/model/Point.cpp" "/home/matias/Desktop/HandRecognition/build/CMakeFiles/HandRecognition.dir/src/model/Point.cpp.o"
+  "/home/matias/Desktop/HandRecognition/src/recognition/AngularRecognition.cpp" "/home/matias/Desktop/HandRecognition/build/CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.o"
   "/home/matias/Desktop/HandRecognition/src/recognition/HandRecognition.cpp" "/home/matias/Desktop/HandRecognition/build/CMakeFiles/HandRecognition.dir/src/recognition/HandRecognition.cpp.o"
   "/home/matias/Desktop/HandRecognition/src/recognition/Image.cpp" "/home/matias/Desktop/HandRecognition/build/CMakeFiles/HandRecognition.dir/src/recognition/Image.cpp.o"
   "/home/matias/Desktop/HandRecognition/src/recognition/RoI.cpp" "/home/matias/Desktop/HandRecognition/build/CMakeFiles/HandRecognition.dir/src/recognition/RoI.cpp.o"
+  "/home/matias/Desktop/HandRecognition/src/recognition/VelocityRecognition.cpp" "/home/matias/Desktop/HandRecognition/build/CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.o"
   "/home/matias/Desktop/HandRecognition/src/recognition/Video.cpp" "/home/matias/Desktop/HandRecognition/build/CMakeFiles/HandRecognition.dir/src/recognition/Video.cpp.o"
+  "/home/matias/Desktop/HandRecognition/src/socket/Client.cpp" "/home/matias/Desktop/HandRecognition/build/CMakeFiles/HandRecognition.dir/src/socket/Client.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
