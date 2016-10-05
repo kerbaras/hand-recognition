@@ -20,6 +20,7 @@ HandRecognition::HandRecognition(const std::string &name) {
 
 void HandRecognition::waitForHand(Video * video) {
     Window window = Window("waitHand");
+    window.fullScreen();
 
     for (;;) {
 
@@ -48,12 +49,12 @@ void HandRecognition::waitForHand(Video * video) {
             int avg[3] = { 0, 0, 0 };
             roi[j]->getAvgColor(avg);
 
-            tracks[j][0] = avg[0] + 10;
-            tracks[j][1] = avg[0] - 10;
-            tracks[j][2] = avg[1] + 25;
-            tracks[j][3] = avg[1] - 25;
-            tracks[j][4] = avg[2] + 40;
-            tracks[j][5] = avg[2] - 40;
+            tracks[j][0] = avg[0] + 15;
+            tracks[j][1] = avg[0] - 15;
+            tracks[j][2] = avg[1] + 30;
+            tracks[j][3] = avg[1] - 30;
+            tracks[j][4] = avg[2] + 45;
+            tracks[j][5] = avg[2] - 45;
         }
 
         window.show(image);

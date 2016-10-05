@@ -14,13 +14,15 @@ private:
     std::string name;
 
 public:
-    Window(const std::string &name);
+    Window(const std::string &name, int flag = cv::WINDOW_NORMAL);
 
     std::string getName();
 
     void show(const cv::Mat &img);
     void show(Image * img);
     void destroy();
+    void normal();
+    void fullScreen();
 };
 
 #endif //HANDRECOGNITION_WINDOW_H

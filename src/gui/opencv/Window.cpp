@@ -4,9 +4,9 @@
 
 #include "Window.h"
 
-Window::Window(const std::string &name) {
+Window::Window(const std::string &name, int flag) {
     this->name = name;
-    cv::namedWindow(name);
+    cv::namedWindow(name, flag);
 }
 
 void Window::show(const cv::Mat &img) {
@@ -23,4 +23,13 @@ void Window::destroy() {
 
 std::string Window::getName() {
     return this->name;
+}
+
+
+void Window::normal() {
+    cv::setWindowProperty(this->name, cv::WND_PROP_FULLSCREEN, cv::WINDOW_NORMAL);
+}
+
+void Window::fullScreen() {
+    cv::setWindowProperty(this->name, cv::WND_PROP_FULLSCREEN, cv::WINDOW_FULLSCREEN);
 }

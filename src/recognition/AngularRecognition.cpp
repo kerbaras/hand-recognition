@@ -19,7 +19,7 @@ void AngularRecognition::fromHand(Hand *hand, Point *center) {
     int v = 0;
 
     if(radius > gap*3){
-        v = 600;
+        v = 500;
     }else if(radius > gap*2){
         v = 400;
     }else if(radius > gap){
@@ -33,22 +33,22 @@ void AngularRecognition::fromHand(Hand *hand, Point *center) {
     }
 
     if (theta >= 0 && theta < PI / 4) {
-        this->motor1 = v + 400;
-        this->motor2 = v;
+        this->motor1 = 2*v;
+        this->motor2 = v*0.8;
     } else if (theta < 3 * PI / 4) {
         this->motor1 = v;
         this->motor2 = v;
     } else if (theta < 4 * PI / 4) {
-        this->motor1 = v;
-        this->motor2 = v + 400;
+        this->motor1 = v*0.8;
+        this->motor2 = 2*v;
     } else if (theta < 5 * PI / 4) {
-        this->motor1 = -v;
-        this->motor2 = -v - 400;
+        this->motor1 = -v*0.8;
+        this->motor2 = -2*v;
     } else if (theta < 7 * PI / 4) {
         this->motor1 = -v;
         this->motor2 = -v;
     } else {
-        this->motor1 = -v - 400;
-        this->motor2 = -v;
+        this->motor1 = -2*v;
+        this->motor2 = -v*0.8;
     }
 }

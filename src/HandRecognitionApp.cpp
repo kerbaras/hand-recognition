@@ -48,7 +48,7 @@ HandRecognitionApp::HandRecognitionApp() {
         int w = image->getSrc()->cols, h = image->getSrc()->rows;
         Point * center = new Point(w/2, h/2);
         velocityRecognition->fromHand(hand, center);
-        int motor0 = -velocityRecognition->getMotor2(); int motor1=-velocityRecognition->getMotor1();
+        int motor0 = -velocityRecognition->getMotor1(); int motor1=-velocityRecognition->getMotor2();
 
             m0 = motor0;
             m1 = motor1;
@@ -71,11 +71,14 @@ HandRecognitionApp::HandRecognitionApp() {
         if(c == char('q')){
           break;
         }else if( c == char('i')){
-          window.destroy();
           handRecognition->waitForHand(video);
+          // window = Window("original");
+        }else if( c == char('c')){
+            delete client;
+            client = new Client("192.168.43.196", 5000);
         }
     }
-
+    cv::destroyAllWindows();
     delete velocityRecognition;
     delete handRecognition;
     delete video;
