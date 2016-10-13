@@ -87,3 +87,13 @@ std::vector<cv::Point> Hand::getHull(){
 std::vector<cv::Vec4i> Hand::getDefects(){
     return this->defects;
 }
+
+void Hand::draw( Image * image ){
+    std::vector<std::vector<cv::Point>> hulls = { this->hull };
+    cv::drawContours(*image->getSrc(), hulls, 0, cv::Scalar(0, 255, 255));
+
+    for (int i = 0; i < defects.size(); ++i) {
+        int faridx = this->defects[i][1]; cv::Point ptFar(this->contour[faridx]);
+        cv::circle(*image->getSrc(), ptFar, 4, cv::Scalar(255, 255,0), 2);
+    }
+}

@@ -19,10 +19,13 @@ CMakeFiles/HandRecognition.dir/src/gui/opencv/Window.cpp.o: ../src/recognition/I
 
 CMakeFiles/HandRecognition.dir/src/main.cpp.o: ../src/HandRecognitionApp.h
 CMakeFiles/HandRecognition.dir/src/main.cpp.o: ../src/main.cpp
+CMakeFiles/HandRecognition.dir/src/main.cpp.o: ../src/model/Hand.h
+CMakeFiles/HandRecognition.dir/src/main.cpp.o: ../src/recognition/Image.h
 CMakeFiles/HandRecognition.dir/src/main.cpp.o: ../src/socket/Client.h
 
 CMakeFiles/HandRecognition.dir/src/model/Hand.cpp.o: ../src/model/Hand.cpp
 CMakeFiles/HandRecognition.dir/src/model/Hand.cpp.o: ../src/model/Hand.h
+CMakeFiles/HandRecognition.dir/src/model/Hand.cpp.o: ../src/recognition/Image.h
 
 CMakeFiles/HandRecognition.dir/src/model/Point.cpp.o: ../src/model/Point.cpp
 CMakeFiles/HandRecognition.dir/src/model/Point.cpp.o: ../src/model/Point.h
@@ -31,6 +34,7 @@ CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.o: ../src/
 CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.o: ../src/model/Point.h
 CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.o: ../src/recognition/AngularRecognition.cpp
 CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.o: ../src/recognition/AngularRecognition.h
+CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.o: ../src/recognition/Image.h
 CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.o: ../src/recognition/VelocityRecognition.h
 
 CMakeFiles/HandRecognition.dir/src/recognition/HandRecognition.cpp.o: ../src/gui/opencv/Window.h
@@ -51,6 +55,7 @@ CMakeFiles/HandRecognition.dir/src/recognition/RoI.cpp.o: ../src/recognition/RoI
 
 CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.o: ../src/model/Hand.h
 CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.o: ../src/model/Point.h
+CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.o: ../src/recognition/Image.h
 CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.o: ../src/recognition/VelocityRecognition.cpp
 CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.o: ../src/recognition/VelocityRecognition.h
 

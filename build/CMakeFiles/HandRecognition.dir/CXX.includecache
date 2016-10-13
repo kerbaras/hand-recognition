@@ -17,8 +17,6 @@ recognition/Video.h
 /home/matias/Desktop/HandRecognition/src/recognition/Video.h
 recognition/Image.h
 /home/matias/Desktop/HandRecognition/src/recognition/Image.h
-model/Hand.h
-/home/matias/Desktop/HandRecognition/src/model/Hand.h
 gui/opencv/Window.h
 /home/matias/Desktop/HandRecognition/src/gui/opencv/Window.h
 socket/Client.h
@@ -35,6 +33,10 @@ sys/socket.h
 -
 
 /home/matias/Desktop/HandRecognition/src/HandRecognitionApp.h
+recognition/Image.h
+/home/matias/Desktop/HandRecognition/src/recognition/Image.h
+model/Hand.h
+/home/matias/Desktop/HandRecognition/src/model/Hand.h
 
 /home/matias/Desktop/HandRecognition/src/gui/opencv/Window.cpp
 Window.h
@@ -71,6 +73,8 @@ vector
 -
 opencv2/ml.hpp
 /home/matias/Desktop/HandRecognition/src/model/opencv2/ml.hpp
+../recognition/Image.h
+/home/matias/Desktop/HandRecognition/src/recognition/Image.h
 
 /home/matias/Desktop/HandRecognition/src/model/Point.cpp
 Point.h

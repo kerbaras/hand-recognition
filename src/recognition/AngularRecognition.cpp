@@ -7,6 +7,15 @@
 AngularRecognition::AngularRecognition() : VelocityRecognition::VelocityRecognition(){ }
 
 void AngularRecognition::fromHand(Hand *hand, Point *center) {
+    if(
+      (hand->getCenter()->x == 0 && hand->getCenter()->y == 0) ||
+      (hand->getDefects().size() < 3)
+    ){
+        this->motor1 = 0;
+        this->motor2 = 0;
+        return;
+    }
+
     int x = hand->getCenter()->x - center->getX();
     int y = hand->getCenter()->y - center->getY();
 
@@ -26,11 +35,6 @@ void AngularRecognition::fromHand(Hand *hand, Point *center) {
         v = 200;
     }
 
-    if((hand->getCenter()->x == 0 && hand->getCenter()->y == 0) || v == 0 || abs(y) < gap/3){
-        this->motor1 = 0;
-        this->motor2 = 0;
-        return;
-    }
 
     if (theta >= 0 && theta < PI / 4) {
         this->motor1 = 2*v;

@@ -7,6 +7,7 @@
 
 #include <vector>
 #include "opencv2/ml.hpp"
+#include "../recognition/Image.h"
 
 class Hand {
 private:
@@ -26,6 +27,7 @@ public:
     std::vector<cv::Point> getContour();
     std::vector<cv::Point> getHull();
     std::vector<cv::Vec4i> getDefects();
+    void draw(Image * image);
 
 };
 

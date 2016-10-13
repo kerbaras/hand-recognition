@@ -128,9 +128,14 @@ Hand* HandRecognition::getHand(Image * original) {
     //mask->medianBlur(3);
 
     std::vector<cv::Point> contour = mask->getLargestContour();
+    //Mat drawing = Mat::zeros( mask->getSrc()->size(), CV_8UC3 );
+    //std::vector<std::vector<cv::Point>> contours = { contour };
+    //drawContours( drawing, contours, 0, cv::Scalar(0,220,0), 2, 8);
 
-    Window wMask = Window("mask");
-    wMask.show(mask);
+
+    //Window wMask = Window("mask");
+    //imshow( "mask", drawing );
+    //wMask.show(mask);
 
 
     for (int i = 0; i < 7; ++i) {
