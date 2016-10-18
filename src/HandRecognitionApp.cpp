@@ -17,21 +17,21 @@
 
 HandRecognitionApp::HandRecognitionApp() {
 
-    //Client * client = new Client("192.168.43.196", 5000);
+    Client * client = new Client("192.168.43.196", 5000);
 
-    Video *video = new Video(0);
+    Video *video = new Video(1);
     HandRecognition * handRecognition = new HandRecognition("izquierda");
 
     handRecognition->waitForHand(video);
 
     Window window = Window("original");
+    Window cpWindow = Window("equalizeHist");
 
     AngularRecognition * velocityRecognition = new AngularRecognition();
     int m0 = 0; int m1=0;
     while(true){
         Image * image = video->getFrame();
         Hand * hand = handRecognition->getHand(image);
-
         hand->draw(image);
 
         int w = image->getSrc()->cols, h = image->getSrc()->rows;
@@ -45,7 +45,7 @@ HandRecognitionApp::HandRecognitionApp() {
         msg = "{\"task\":\"setSpeed\",\"m0\":" +
               std::to_string(motor0) + ",\"m1\":" +
               std::to_string(motor1) + "}";
-        //client->send(msg);
+        client->send(msg);
 
         this->buildGUI(image, hand);
 
@@ -59,15 +59,15 @@ HandRecognitionApp::HandRecognitionApp() {
         }else if( c == char('i')){
           handRecognition->waitForHand(video);
         }else if( c == char('c')){
-            //delete client;
-            //client = new Client("192.168.43.196", 5000);
+            delete client;
+            client = new Client("192.168.43.196", 5000);
         }
     }
     cv::destroyAllWindows();
     delete velocityRecognition;
     delete handRecognition;
     delete video;
-    //delete client;
+    delete client;
 }
 
 void HandRecognitionApp::buildGUI( Image * image, Hand * hand){

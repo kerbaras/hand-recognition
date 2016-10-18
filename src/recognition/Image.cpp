@@ -91,6 +91,20 @@ void Image::medianBlur(int size) {
     cv::medianBlur(*src, *src, size);
 }
 
+void Image::equalizeHist(){
+      cv::Mat ycrcb;
+      cv::cvtColor(*src,ycrcb,cv::COLOR_BGR2HSV);
+
+      std::vector<cv::Mat> channels;
+      cv::split(ycrcb,channels);
+
+      cv::equalizeHist(channels[2], channels[2]);
+
+      cv::merge(channels,ycrcb);
+
+      cv::cvtColor(ycrcb,*src,cv::COLOR_HSV2BGR);
+}
+
 std::vector<std::vector<cv::Point>> Image::getContours() {
     std::vector<std::vector<cv::Point>> contours;
     cv::Mat copy;

@@ -64,8 +64,8 @@ float Hand::distanceP2P(cv::Point a, cv::Point b){
 }
 
 float Hand::getAngle(cv::Point s, cv::Point f, cv::Point e){
+  float l2 = distanceP2P(f,e);
 	float l1 = distanceP2P(f,s);
-	float l2 = distanceP2P(f,e);
 	float dot=(s.x-f.x)*(e.x-f.x) + (s.y-f.y)*(e.y-f.y);
 	float angle = acos(dot/(l1*l2));
 	angle=angle*180/3.14159;

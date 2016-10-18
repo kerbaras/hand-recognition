@@ -31,6 +31,7 @@ public:
     void blur(cv::Size ksize, cv::Point anchor=cv::Point(-1,-1),
               int borderType=cv::BORDER_DEFAULT);
     void medianBlur(int size);
+    void equalizeHist();
     std::vector<std::vector<cv::Point>> getContours();
     std::vector<cv::Point> getLargestContour();
 

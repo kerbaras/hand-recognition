@@ -49,12 +49,12 @@ void HandRecognition::waitForHand(Video * video) {
             int avg[3] = { 0, 0, 0 };
             roi[j]->getAvgColor(avg);
 
-            tracks[j][0] = avg[0] + 15;
-            tracks[j][1] = avg[0] - 15;
-            tracks[j][2] = avg[1] + 30;
-            tracks[j][3] = avg[1] - 30;
-            tracks[j][4] = avg[2] + 45;
-            tracks[j][5] = avg[2] - 45;
+            tracks[j][0] = avg[0] + 15; //hmax
+            tracks[j][1] = avg[0] - 15; //hmin
+            tracks[j][2] = avg[1] + 30; //smax
+            tracks[j][3] = avg[1] - 30; //smin
+            tracks[j][4] = avg[2] + 255; //vmax
+            tracks[j][5] = avg[2] - 255; //vmin
         }
 
         window.show(image);
@@ -106,8 +106,8 @@ Hand* HandRecognition::getHand(Image * original) {
     }
 
 
-    Image * mask = new Image();
 
+    Image * mask = new Image();
 
     cv::Mat &maskSrc = *mask->getSrc();
 
@@ -119,23 +119,23 @@ Hand* HandRecognition::getHand(Image * original) {
     cv::bitwise_or(maskSrc, *masks[6]->getSrc(), maskSrc);
 
 
-    mask->dilate(cv::Size(8, 8));
-    mask->medianBlur(7);
-    mask->dilate(cv::Size(2, 2));
-    mask->dilate(cv::Size(5, 5));
-    mask->erode(cv::Size(8, 8));
     mask->erode(cv::Size(4, 4));
+    mask->dilate(cv::Size(5, 5));
+    //mask->medianBlur(7);
+    //mask->erode(cv::Size(8, 8));
     //mask->medianBlur(3);
 
     std::vector<cv::Point> contour = mask->getLargestContour();
     //Mat drawing = Mat::zeros( mask->getSrc()->size(), CV_8UC3 );
     //std::vector<std::vector<cv::Point>> contours = { contour };
     //drawContours( drawing, contours, 0, cv::Scalar(0,220,0), 2, 8);
+    cv::Rect rect = cv::boundingRect(contour);
+    cv::rectangle( *original->getSrc(), rect.tl(), rect.br(), cv::Scalar(0,220,0), 2, 8, 0 );
+    std::cout << cv::mean(*image->getSrc(), *mask->getSrc()) << std::endl;
+    Hand * hand = new Hand(contour);
 
-
-    //Window wMask = Window("mask");
-    //imshow( "mask", drawing );
-    //wMask.show(mask);
+    Window wMask = Window("mask");
+    wMask.show(mask);
 
 
     for (int i = 0; i < 7; ++i) {
@@ -143,5 +143,5 @@ Hand* HandRecognition::getHand(Image * original) {
     }
     delete mask;
     delete image;
-    return new Hand(contour);
+    return hand;
 }
