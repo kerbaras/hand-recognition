@@ -19,7 +19,7 @@ HandRecognitionApp::HandRecognitionApp() {
 
     Client * client = new Client("192.168.43.196", 5000);
 
-    Video *video = new Video(1);
+    Video *video = new Video(0);
     HandRecognition * handRecognition = new HandRecognition("izquierda");
 
     handRecognition->waitForHand(video);
@@ -56,11 +56,15 @@ HandRecognitionApp::HandRecognitionApp() {
 
         if(c == char('q')){
           break;
-        }else if( c == char('i')){
+        }else if( c == char('g')){
           handRecognition->waitForHand(video);
         }else if( c == char('c')){
             delete client;
             client = new Client("192.168.43.196", 5000);
+        }else if (c == char('t')) {
+          cv::Rect rect = cv::boundingRect(hand->getContour());
+          cv::Mat mask(rect.size());
+
         }
     }
     cv::destroyAllWindows();

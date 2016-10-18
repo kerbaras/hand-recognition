@@ -1,21 +1,21 @@
-file(REMOVE_RECURSE
-  "CMakeFiles/HandRecognition.dir/src/main.cpp.o"
-  "CMakeFiles/HandRecognition.dir/src/HandRecognitionApp.cpp.o"
-  "CMakeFiles/HandRecognition.dir/src/recognition/Video.cpp.o"
-  "CMakeFiles/HandRecognition.dir/src/recognition/Image.cpp.o"
-  "CMakeFiles/HandRecognition.dir/src/recognition/RoI.cpp.o"
-  "CMakeFiles/HandRecognition.dir/src/recognition/HandRecognition.cpp.o"
-  "CMakeFiles/HandRecognition.dir/src/model/Hand.cpp.o"
-  "CMakeFiles/HandRecognition.dir/src/model/Point.cpp.o"
-  "CMakeFiles/HandRecognition.dir/src/gui/opencv/Window.cpp.o"
-  "CMakeFiles/HandRecognition.dir/src/socket/Client.cpp.o"
-  "CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.cpp.o"
-  "CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.cpp.o"
+FILE(REMOVE_RECURSE
+  "CMakeFiles/HandRecognition.dir/src/main.o"
+  "CMakeFiles/HandRecognition.dir/src/HandRecognitionApp.o"
+  "CMakeFiles/HandRecognition.dir/src/recognition/Video.o"
+  "CMakeFiles/HandRecognition.dir/src/recognition/Image.o"
+  "CMakeFiles/HandRecognition.dir/src/recognition/RoI.o"
+  "CMakeFiles/HandRecognition.dir/src/recognition/HandRecognition.o"
+  "CMakeFiles/HandRecognition.dir/src/model/Hand.o"
+  "CMakeFiles/HandRecognition.dir/src/model/Point.o"
+  "CMakeFiles/HandRecognition.dir/src/gui/opencv/Window.o"
+  "CMakeFiles/HandRecognition.dir/src/socket/Client.o"
+  "CMakeFiles/HandRecognition.dir/src/recognition/VelocityRecognition.o"
+  "CMakeFiles/HandRecognition.dir/src/recognition/AngularRecognition.o"
   "HandRecognition.pdb"
   "HandRecognition"
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang CXX)
-  include(CMakeFiles/HandRecognition.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()
+FOREACH(lang CXX)
+  INCLUDE(CMakeFiles/HandRecognition.dir/cmake_clean_${lang}.cmake OPTIONAL)
+ENDFOREACH(lang)
