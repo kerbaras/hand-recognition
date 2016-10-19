@@ -21,9 +21,15 @@ void AngularRecognition::fromHand(Hand *hand, Point *center) {
 
     double theta = atan2(y, -x) + PI;
 
-    long double radius = center->distance(hand->getCenter());
-
     int gap = center->getY()/5;
+
+    cv::Point * pc;
+
+    if(y > gap){
+      pc = new cv::Point(x, y + hand->getRect().height/2);
+    }
+
+    long double radius = center->distance(hand->getCenter());
 
     int v = 0;
 

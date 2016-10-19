@@ -1,4 +1,4 @@
-file(REMOVE_RECURSE
+FILE(REMOVE_RECURSE
   "CMakeFiles/HandRecognition.dir/src/main.o"
   "CMakeFiles/HandRecognition.dir/src/HandRecognitionApp.o"
   "CMakeFiles/HandRecognition.dir/src/recognition/Video.o"
@@ -16,6 +16,6 @@ file(REMOVE_RECURSE
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang CXX)
-  include(CMakeFiles/HandRecognition.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()
+FOREACH(lang CXX)
+  INCLUDE(CMakeFiles/HandRecognition.dir/cmake_clean_${lang}.cmake OPTIONAL)
+ENDFOREACH(lang)

@@ -17,6 +17,7 @@ private:
     std::vector<cv::Vec4i> defects;
     float distanceP2P(cv::Point a, cv::Point b);
     float getAngle(cv::Point s, cv::Point f, cv::Point e);
+    cv::Rect rect;
 
 public:
     Hand();
@@ -28,6 +29,7 @@ public:
     std::vector<cv::Point> getHull();
     std::vector<cv::Vec4i> getDefects();
     void draw(Image * image);
+    cv::Rect getRect();
 
 };
 

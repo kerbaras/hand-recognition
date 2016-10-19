@@ -52,6 +52,7 @@ Hand::Hand(std::vector<cv::Point> contour) {
         defects.swap(newDefects);
     }
     this->center = new cv::Point(x, y);
+    this->rect = cv::boundingRect(this->contour);
 }
 
 Hand::~Hand() {
@@ -96,4 +97,8 @@ void Hand::draw( Image * image ){
         int faridx = this->defects[i][1]; cv::Point ptFar(this->contour[faridx]);
         cv::circle(*image->getSrc(), ptFar, 4, cv::Scalar(255, 255,0), 2);
     }
+}
+
+cv::Rect Hand::getRect(){
+  return this->rect;
 }
