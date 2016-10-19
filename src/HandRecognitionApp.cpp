@@ -63,7 +63,7 @@ HandRecognitionApp::HandRecognitionApp() {
             client = new Client("192.168.43.196", 5000);
         }else if (c == char('t')) {
           cv::Rect rect = cv::boundingRect(hand->getContour());
-          cv::Mat mask(rect.size());
+          //cv::Mat mask(rect.size(), cv::CV_U8C1);
 
         }
     }
@@ -77,9 +77,9 @@ HandRecognitionApp::HandRecognitionApp() {
 void HandRecognitionApp::buildGUI( Image * image, Hand * hand){
         int w = image->getSrc()->cols, h = image->getSrc()->rows;
         Point * center = new Point(w/2, h/2);
-        cv::circle(*image->getSrc(), cv::Point(center->getX(), center->getY()), w/8, cv::Scalar(0,10,127),2);
-        cv::circle(*image->getSrc(), cv::Point(center->getX(), center->getY()), (w/8)*2, cv::Scalar(76,01,255),2);
-        cv::circle(*image->getSrc(), cv::Point(center->getX(), center->getY()), (w/8)*3, cv::Scalar(0,16,204),2);
+        cv::circle(*image->getSrc(), cv::Point(center->getX(), center->getY()), w/10, cv::Scalar(0,10,127),2);
+        cv::circle(*image->getSrc(), cv::Point(center->getX(), center->getY()), (w/10)*2, cv::Scalar(76,01,255),2);
+        cv::circle(*image->getSrc(), cv::Point(center->getX(), center->getY()), (w/10)*3, cv::Scalar(0,16,204),2);
         cv::line(*image->getSrc(), cv::Point(center->getX(), center->getY()), *hand->getCenter(), cv::Scalar(0,220,115),1);
         //cv::line(*image->getSrc(), cv::Point(0, h/2), cv::Point(w,h/2), cv::Scalar(0,220,115),2);
 }

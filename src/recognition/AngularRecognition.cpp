@@ -23,7 +23,7 @@ void AngularRecognition::fromHand(Hand *hand, Point *center) {
 
     long double radius = center->distance(hand->getCenter());
 
-    int gap = center->getY()/4;
+    int gap = center->getY()/5;
 
     int v = 0;
 

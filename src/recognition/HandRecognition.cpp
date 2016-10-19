@@ -53,8 +53,8 @@ void HandRecognition::waitForHand(Video * video) {
             tracks[j][1] = avg[0] - 15; //hmin
             tracks[j][2] = avg[1] + 30; //smax
             tracks[j][3] = avg[1] - 30; //smin
-            tracks[j][4] = avg[2] + 255; //vmax
-            tracks[j][5] = avg[2] - 255; //vmin
+            tracks[j][4] = 255;// avg[2] + 255; //vmax
+            tracks[j][5] = 20; //avg[2] - 255; //vmin
         }
 
         window.show(image);
