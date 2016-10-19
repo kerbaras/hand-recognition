@@ -97,6 +97,7 @@ void Hand::draw( Image * image ){
         int faridx = this->defects[i][1]; cv::Point ptFar(this->contour[faridx]);
         cv::circle(*image->getSrc(), ptFar, 4, cv::Scalar(255, 255,0), 2);
     }
+    cv::rectangle( *image->getSrc(), this->rect.tl(), this->rect.br(), cv::Scalar(0,220,0), 2, 8, 0 );
 }
 
 cv::Rect Hand::getRect(){

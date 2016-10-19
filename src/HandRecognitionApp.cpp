@@ -25,10 +25,10 @@ HandRecognitionApp::HandRecognitionApp() {
     handRecognition->waitForHand(video);
 
     Window window = Window("original");
-    Window cpWindow = Window("equalizeHist");
+    Window arrowWindow = Window("arrow");
 
     AngularRecognition * velocityRecognition = new AngularRecognition();
-    int m0 = 0; int m1=0;
+    int m0 = 0; int m1=0; std::string file; cv::Mat arrow;
     while(true){
         Image * image = video->getFrame();
         Hand * hand = handRecognition->getHand(image);
@@ -40,17 +40,24 @@ HandRecognitionApp::HandRecognitionApp() {
 
         int motor0 = -velocityRecognition->getMotor1();
         int motor1=-velocityRecognition->getMotor2();
+        std::string descr = velocityRecognition->getDescriptor();
+        if(descr != file) {
+            file = descr;
+            arrow = cv::imread("./arrows/" + file + ".png");
+        }
 
         std::string msg;
         msg = "{\"task\":\"setSpeed\",\"m0\":" +
               std::to_string(motor0) + ",\"m1\":" +
               std::to_string(motor1) + "}";
-        client->send(msg);
-
+        //client->send(msg);
+        std::cout << "(" << motor0 << ", " << motor1 << ")" <<std::endl;
         this->buildGUI(image, hand);
 
         window.show(image);
         delete image;
+
+        cv::imshow("arrow", arrow);
 
         char c = cv::waitKey(1);
 

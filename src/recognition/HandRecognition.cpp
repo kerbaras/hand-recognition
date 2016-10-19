@@ -36,13 +36,13 @@ void HandRecognition::waitForHand(Video * video) {
 
         int cols = hsv->getSrc()->cols;
         int rows = hsv->getSrc()->rows;
-        roi[0] = (RoI*) hsv->roi(cols/3, rows/2.3, 20, 20);
-        roi[1] = (RoI*) hsv->roi(cols/4, rows/2, 20, 20);
-        roi[2] = (RoI*) hsv->roi(cols/3, rows/1.6, 20, 20);
-        roi[3] = (RoI*) hsv->roi(cols/2, rows/1.8, 20, 20);
-        roi[4] = (RoI*) hsv->roi(cols/2.5, rows/2, 20, 20);
-        roi[5] = (RoI*) hsv->roi(cols/3, rows/1.8, 20, 20);
-        roi[6] = (RoI*) hsv->roi(cols/2.7, rows/2, 20, 20);
+        roi[0] = (RoI*) hsv->roi(cols/2, rows/2, 10, 10);
+        roi[1] = (RoI*) hsv->roi(cols/2 + 15, rows/2, 10, 10);
+        roi[2] = (RoI*) hsv->roi(cols/2 - 15, rows/2, 10, 10);
+        roi[3] = (RoI*) hsv->roi(cols/2, rows/2 + 15, 10, 10);
+        roi[4] = (RoI*) hsv->roi(cols/2, rows/2 - 15, 10, 10);
+        roi[5] = (RoI*) hsv->roi(cols/2, rows/2 - 40, 10, 10);
+        roi[6] = (RoI*) hsv->roi(cols/2 + 40, rows/2, 10, 10);
 
         for (int j = 0; j < 7; ++j) {
             roi[j]->drawRect(image);
@@ -129,9 +129,6 @@ Hand* HandRecognition::getHand(Image * original) {
     //Mat drawing = Mat::zeros( mask->getSrc()->size(), CV_8UC3 );
     //std::vector<std::vector<cv::Point>> contours = { contour };
     //drawContours( drawing, contours, 0, cv::Scalar(0,220,0), 2, 8);
-    cv::Rect rect = cv::boundingRect(contour);
-    cv::rectangle( *original->getSrc(), rect.tl(), rect.br(), cv::Scalar(0,220,0), 2, 8, 0 );
-    std::cout << cv::mean(*image->getSrc(), *mask->getSrc()) << std::endl;
     Hand * hand = new Hand(contour);
 
     Window wMask = Window("mask");

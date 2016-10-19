@@ -8,9 +8,12 @@
 #include "VelocityRecognition.h"
 
 class AngularRecognition : public VelocityRecognition {
+private:
+    std::string descriptor;
 public:
     AngularRecognition();
     virtual void fromHand(Hand * hand, Point *center);
+    std::string getDescriptor();
 };
 
 
