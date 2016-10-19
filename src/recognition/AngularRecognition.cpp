@@ -81,7 +81,7 @@ void AngularRecognition::fromHand(Hand *hand, Point *center) {
         this->descriptor += s;
         this->descriptor += d;
         this->descriptor += "_";
-        this->descriptor += vf;
+        this->descriptor += std::to_string(vf);
     }
 }
 

@@ -43,21 +43,24 @@ HandRecognitionApp::HandRecognitionApp() {
         std::string descr = velocityRecognition->getDescriptor();
         if(descr != file) {
             file = descr;
+            std::string str = "./arrows/" + file + ".png";
             arrow = cv::imread("./arrows/" + file + ".png");
+            std::cout << str <<std::endl;
         }
 
         std::string msg;
         msg = "{\"task\":\"setSpeed\",\"m0\":" +
               std::to_string(motor0) + ",\"m1\":" +
               std::to_string(motor1) + "}";
-        //client->send(msg);
+        client->send(msg);
         std::cout << "(" << motor0 << ", " << motor1 << ")" <<std::endl;
         this->buildGUI(image, hand);
 
         window.show(image);
         delete image;
 
-        cv::imshow("arrow", arrow);
+        if(arrow.rows > 0)
+            cv::imshow("arrow", arrow);
 
         char c = cv::waitKey(1);
 

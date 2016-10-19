@@ -31,7 +31,6 @@ Client::Client(const char * ip, int port) {
 }
 
 void Client::send(std::string data) {
-    std::cout<< data<< std::endl;
     size_t lon = strlen(data.c_str());
     char buffer[lon];
     bzero(&buffer, lon);

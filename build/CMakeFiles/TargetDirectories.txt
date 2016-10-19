@@ -1,1 +1,3 @@
-/home/ronchetti/proyecto-vision/build/CMakeFiles/HandRecognition.dir
+/home/matias/Desktop/HandRecognition/build/CMakeFiles/edit_cache.dir
+/home/matias/Desktop/HandRecognition/build/CMakeFiles/rebuild_cache.dir
+/home/matias/Desktop/HandRecognition/build/CMakeFiles/HandRecognition.dir
